@@ -11,9 +11,9 @@ const ListRestaurant = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantSource.ListRestaurant();
+    const restaurant = await RestaurantSource.ListRestaurant();
     const restaurantsContainer = document.querySelector('#restaurants');
-    restaurants.forEach((restaurants) => {
+    restaurant.forEach((restaurants) => {
       restaurantsContainer.innerHTML += RestaurantItem(restaurants);
     });
   },
