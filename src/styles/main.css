@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Newsreader:wght@400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #212121;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+/*
+Hamburger Menu
+*/
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 3.5em;
+    width: 3.5em;
+    padding: 0.6em 0;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #212121;
+    border: 0;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 3.5em;
+    height: 3.5em;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-toggle .line {
+    display: block;
+    width: 2em;
+    height: 0.2em;
+    background-color: #EFEFEF;
+    border-radius: 0.05em;
+    transition: all 0.5s;
+} 
+
+/*
+Hamburger Menu Animation
+*/
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate( 2px, 0px); 
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0; 
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate( 0.5px, 0.5px);
+}
+
+/*
+========================
+    Desktop Styling
+========================
+*/
+
+/* 
+Header 
+*/
+
+.main-header {
+    background-color: #212121;
+}
+
+.mh-logo {
+    cursor: pointer;
+}
+
+.a-logo {
+    padding: 1em 0 0.45em 0;
+}
+
+.container {
+    max-width: 100%;
+    height: 5em;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav {
+    text-align: center;
+    justify-content: center;
+}
+
+.main-nav-list {
+    display: flex;
+}
+
+.main-nav-list li {
+    display: inline;
+}
+
+.main-nav-list a {
+    color: #F0F0F0;
+    display: inline-block;
+    padding: 1.5em 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-nav-list a:hover {
+    color: #EEC32A;
+}
+
+/*
+First Section
+*/
+.bg-img{
+    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.65)), url("../public/images/heros/hero-image_1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second {
+    font-family: Newsreader;
+    font-size: 2.8em;
+    text-align: center;
+    justify-content: center;
+    padding: 3.5em 0 1.5em 0;
+}
+
+.tombol {
+    border: none;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    color: #F0F0F0;
+    background-color: #212121;
+    margin: 0;
+    padding: 1.5em 3em;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.tombol:hover {
+    background-color: #EEC32A;
+}
+
+/*
+Second Section
+*/
+
+.sec-second {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 4em;
+    padding: 6em;
+}
+
+.img-sec-second {
+    width: 70%;
+}
+
+.h2-judul-second {
+    font-family: "Newsreader", serif;
+    font-size: 2.5em;
+    color: #212121;
+    margin: .5em 0 0.8em 0;
+}
+
+.p-second {
+    line-height: 1.8em;
+    margin-bottom: 3em;
+}
+
+.appstore {
+    width: 50%;
+}
+
+/*
+Third Section
+*/
+
+.sec-third {
+    background-color: #212121;
+    padding: 6em 6em 10em 6em;
+}
+
+.h2-judul-third {
+    font-family: "Newsreader", serif;
+    font-size: 2.5em;
+    color: #F0F0F0;
+    margin: .5em 0 0.8em 0;
+    text-align: center;
+    padding-bottom: 2.5em;
+}
+
+.grid-third {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+
+.icon-third {
+    margin: 0 3em;
+}
+
+.h4-judul {
+    color: #F0F0F0;
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+.p-third {
+    color: #F0F0F0;
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+
+/*
+Forth Section
+*/
+
+.sec-fourth {
+    padding: 3em 0;
+}
+
+.h2-judul-fourth {
+    font-family: "Newsreader", serif;
+    font-size: 2.5em;
+    color: #212121;
+    margin: .5em 0 0.8em 0;
+    text-align: center;
+}
+
+.grid-fourth {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: top;
+    padding: 3em;
+}
+
+.img-daily {
+    margin-left: 15em;
+}
+
+.img-tech {
+    margin: 2em 0 0 2em;
+}
+
+/*
+Fifth Section
+*/
+
+.sec-fifth {
+    background-color: #EFEFEF;
+    padding: 3em 0;
+}
+
+.h2-judul-fifth {
+    font-family: "Newsreader", serif;
+    font-size: 2.5em;
+    color: #212121;
+    margin: .5em 0 0 0;
+    text-align: center;
+}
+
+/*
+Footer
+*/
+
+.main-footer {
+    background-color: #212121;
+}
+
+.p-footer {
+    color: #F0F0F0;
+    text-align: center;
+    padding: 2em;
+}
