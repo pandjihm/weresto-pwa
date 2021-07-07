@@ -1,7 +1,12 @@
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1080px)
 {
-    .grid-fifth {
+
+/*
+    List Restaurant
+*/
+
+    .restaurants {
         display: grid;
         grid-template-columns: 50% 50%;
         padding: 3em 0;
@@ -9,6 +14,26 @@
 
     .card-fifth {
         margin-top: 3em;
+    }
+
+    .img-fifth {
+        height: 45vh;
+    }
+
+/*
+    Detail List Restaurant
+*/
+
+    .grid-detail {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 6em 6em 1em 6em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detail-info {
+        margin: 2em 1em;
     }
 }
 
@@ -107,7 +132,7 @@ Tablet Fifth Section
         padding-top: 1em;
     }
 
-    .grid-fifth {
+    .restaurants {
         display: grid;
         grid-template-columns: 50% 50%;
         padding: 3em 0;
@@ -117,12 +142,37 @@ Tablet Fifth Section
         margin-top: 3em;
     }
 
+    .img-fifth {
+        height: 45vh;
+    }
+
 }
 
-@media screen and (max-width: 600px)
+
+@media screen and (max-width: 712px)
 {
-    .grid-fifth {
+    .restaurants {
         grid-template-columns: 100%;
+    }
+
+    .img-fifth {
+        height: 45vh;
+    }
+
+/*
+    Detail List Restaurant
+*/
+
+    .grid-detail {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 6em 2em 1em 2em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .desc-pad {
+        padding: 0 3em;
     }
 }
 
@@ -208,8 +258,34 @@ Mobile Fourth Section
 Mobile Fifth Section
 */
 
-    .grid-fifth {
+    .restaurants {
         grid-template-columns: 100%;
+    }
+
+    .img-fifth {
+        height: 45vh;
+    }
+
+    .p-review {
+        word-wrap: break-word;
+    }
+
+/*
+    Detail List Restaurant
+*/
+
+    .grid-detail {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 6em 2em 1em 2em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detail-img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
     }
 
 }

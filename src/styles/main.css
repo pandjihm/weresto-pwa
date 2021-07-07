@@ -10,6 +10,18 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    align-items: center;
+    text-decoration: none;
+    color: #212121;
+    padding: 1em;
+}
+
+a:hover {
+    color: #EEC32A;
+    font-weight: 700;
+}
+
 body, html {
     padding: 0;
     margin: 0;
@@ -26,6 +38,10 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+p {
+    word-wrap: break-word;
 }
 
 .skip-link {
@@ -323,6 +339,180 @@ Fifth Section
 }
 
 /*
+    List Restaurant
+*/
+
+.restaurants {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 6em;
+    overflow: hidden;
+}
+
+.img-fifth {
+    width: 100%;
+    height: 35vh;
+    border-radius: 0.5em 0.5em 0 0;
+    background-position: center;
+    object-fit: cover;
+}
+
+.h4-judul-resto {
+    color: #212121;
+    font-weight: 700;
+    margin: 2em 1.3em 0.8em 0.3em;
+}
+
+.p-fifth {
+    line-height: 1.5em;
+    margin: 1em 1.3em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-fifth {
+    background-color: #FFF;
+    margin: 2em 2em;
+    border-radius: 0.5em;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.012);
+}
+
+.city {
+    padding: 0.5em 1em;
+    margin: 1em 1.3em;
+    background-color: #EEE;
+    width: fit-content;
+    border-radius: 1em;
+}
+
+.p-city {
+    font-size: 12px;
+    font-weight: 600;
+    color: #7D7D7D;
+}
+
+.rating {
+    width: fit-content;
+    opacity: 0.85;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding: 0.5em;
+    margin: 1em 0 0 1em;
+    background-color: #212121;
+    border-radius: 2em;
+    z-index: 60;
+}
+
+.p-rating {
+    margin: 0 .5em;
+    font-weight: 600;
+    color: #EFEFEF;
+    font-size: 12px;
+}
+
+.arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em 1em 0;
+    margin-left: 5em;
+
+}
+
+.img-arrow {
+    padding-top: 0.1em;
+}
+
+/*
+    Detail List Restaurant
+*/
+
+.grid-detail {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 6em 6em 1em 6em;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-img {
+    width: 100%;
+    margin: 1em;
+    border-radius: 0.5em;
+}
+
+.detail-info {
+    margin: 2em 4em;
+}
+
+.grid-city-rating {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.city-detail {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background-color: #DDD;
+    width: fit-content;
+    border-radius: 1em;
+}
+
+.rating-detail {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding: 0.5em 1em;
+    margin: 1em;
+    background-color: #DDD;
+    border-radius: 2em;
+}
+
+.p-rating-detail {
+    margin: 0 .5em;
+    font-weight: 600;
+    color: #7D7D7D;
+    font-size: 12px;
+}
+
+.p-padding {
+    padding: .5em 0;
+    margin-bottom: .5em;
+}
+
+.desc-pad {
+    padding: 0 7em;
+}
+
+.review-padding {
+    padding-top: 2em;
+}
+
+.grid-review {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    padding: 2em 2em 2em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-rev-name {
+    padding: 0 0 1em 0;
+}
+
+/*
 Footer
 */
 
@@ -334,4 +524,24 @@ Footer
     color: #F0F0F0;
     text-align: center;
     padding: 2em;
+}
+
+/*
+    Like
+*/
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

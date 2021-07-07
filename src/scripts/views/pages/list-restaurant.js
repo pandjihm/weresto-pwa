@@ -4,9 +4,7 @@ import { RestaurantItem } from '../templates/template-creator';
 const ListRestaurant = {
   async render() {
     return `
-      <div class="content">
         <div id="restaurants" class="restaurants"></div>
-      </div>
     `;
   },
 
