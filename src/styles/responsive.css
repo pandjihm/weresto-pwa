@@ -277,7 +277,7 @@ Mobile Fifth Section
     .grid-detail {
         display: grid;
         grid-template-columns: 100%;
-        padding: 6em 2em 1em 2em;
+        padding: 6em 0 1em 1em;
         justify-content: center;
         align-items: center;
     }
@@ -288,4 +288,20 @@ Mobile Fifth Section
         object-fit: cover;
     }
 
+    .desc-pad {
+        padding: 0 2em;
+    }
+
+    /* Reviews */
+    .restaurant-reviews {
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+
+    /*
+        ///// Form Post Review /////
+    */
+    form {
+        margin-right: 0;
+    }
 }

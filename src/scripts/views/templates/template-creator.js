@@ -10,15 +10,21 @@ const RestaurantDetail = (restaurant) => `
       <p>${restaurant.address}</p>
       <div class="grid-city-rating">
         <div class="city-detail">
-        <p class="p-city">${restaurant.city}</p>
+          <p class="p-city">${restaurant.city}</p>
         </div>
         <div class="rating-detail">
             <img tabindex="0" src="../images/heros/star.svg" width="14vh" alt="rating"> 
             <p tabindex="0" class="p-rating-detail">${restaurant.rating}</p>
         </div>
       </div>
-      <h4>Category:</h4>
-      <p class="p-padding">${restaurant.categories.map((categorie) => categorie.name)}</p>
+      <div class="flex-category">
+        <h4>Category:</h4>
+        <div class="p-category">
+          ${restaurant.categories.map((categorie) => `
+              <span class="categorie-restaurant">${categorie.name}</span>
+            `).join('')}
+        </div>
+      </div>
       <h4>Food Menu:</h4>
       <p class="p-padding">${restaurant.menus.foods.map((food) => food.name)}</p>
       <h4>Drink Menu:</h4>
@@ -28,17 +34,30 @@ const RestaurantDetail = (restaurant) => `
   <div class="desc-pad">
     <h4 tabindex="0">Description:</h4>
     <p tabindex="0" class="p-padding">${restaurant.description}</p>
-    <h4 tabindex="0" class="review-padding">Review:</h4>
-    <div class="restaurantInfo">
+    <h4 tabindex="0" class="review-padding">Reviews:</h4>
+    <div class="form-review">
+          <form>
+            <div class="form-margin">
+              <label for="inputName" class="form-label">Name:</label>
+              <input name="inputName" type="text" class="form-input" id="inputName" placeholder="Your Complete Name">
+            </div>
+            <div class="form-margin">
+              <label for="inputReview" class="form-label">Review:</label>
+              <input name="inputReview" type="text" class="form-input input-pad" id="inputReview" placeholder="Your Experience in This Restaurant">
+            </div>
+            <button id="submit-review" type="submit" class="tombol sub-review">Submit</button>
+          </form>
+        </div>
+    <div class="restaurant-reviews">
       ${restaurant.customerReviews.map((review) => `
         <div class="grid-review">
-          <div class="grid-rev-name">
+          <div class="review-review">
             <p tabindex="0">${review.name}</p>
             <h5 tabindex="0" class="p-city">${review.date}</h5>
           </div>
-          <div>
+          <div class="review-review">
             <p tabindex="0" class="p-review">${review.review}</p>
-          <div>
+          </div>
         </div>
       `).join('')}
     </div>
@@ -79,6 +98,16 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
+const Spinner = () => `
+  <div class="spinner-wrapper">
+    <span class="spinner-grow hitam" role="status"></span>
+    <span class="spinner-grow grey" role="status"></span>
+    <span class="spinner-grow abu" role="status"></span>
+  </div>
+`;
+
+export default Spinner;
+
 export {
-  RestaurantDetail, RestaurantItem, createLikeButtonTemplate, createLikedButtonTemplate,
+  RestaurantDetail, RestaurantItem, createLikeButtonTemplate, createLikedButtonTemplate, Spinner,
 };

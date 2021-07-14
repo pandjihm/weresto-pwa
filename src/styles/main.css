@@ -19,7 +19,6 @@ a {
 
 a:hover {
     color: #EEC32A;
-    font-weight: 700;
 }
 
 body, html {
@@ -214,6 +213,7 @@ First Section
     align-items: center;
     text-align: center;
     text-decoration: none;
+    border-radius: .5em;
 }
 
 .tombol:hover {
@@ -487,6 +487,26 @@ Fifth Section
     font-size: 12px;
 }
 
+.flex-category {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1em 0;
+}
+
+.categorie-restaurant {
+    background-color: #212121;
+    color: #DDD;
+    padding: 0.5em 1.25em;
+    margin: 0 .25em;
+    border-radius: 1.5em;
+}
+
+.p-category {
+    margin: .25em .5em;
+    font-weight: 500;
+    font-size: 12px;
+}
+
 .p-padding {
     padding: .5em 0;
     margin-bottom: .5em;
@@ -500,16 +520,30 @@ Fifth Section
     padding-top: 2em;
 }
 
-.grid-review {
-    display: inline-grid;
-    grid-template-columns: 1fr;
+.fav-resto {
+    text-align: center;
+    align-items: center;
+    color: #7D7D7D;
+}
+/* Reviews */
+
+.restaurant-reviews {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
     padding: 2em 2em 2em 0;
     justify-content: center;
     align-items: center;
 }
 
-.grid-rev-name {
-    padding: 0 0 1em 0;
+.grid-review {
+    background-color: #DDD;
+    border-radius: .5em;
+}
+
+.review-review {
+    padding: 1em;
 }
 
 /*
@@ -527,7 +561,7 @@ Footer
 }
 
 /*
-    Like
+    ///// Like /////
 */
 .like {
     font-size: 18px;
@@ -544,4 +578,94 @@ Footer
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*
+    ///// Form Post Review /////
+*/
+
+form {
+    margin: 2em 2em 2em 0;
+    padding: 1.5em;
+    border: 2px solid #7D7D7D;
+    border-radius: 0.5em;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    min-height: 1em;
+    padding: 1em;
+    margin: .5em 0;
+    color: #212121;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #7D7D7D;
+    appearance: none;
+    border-radius: 0.5em;
+}
+
+.input-pad {
+    padding-bottom: 5em;
+}
+
+.form-label {
+    padding-bottom: 8px;
+    font-weight: 800;
+}
+
+.form-margin {
+    margin-bottom: 1.3em;
+    margin-top: 0.5em;
+}
+
+.sub-review {
+    margin-top: 2em;
+}
+
+/*
+    ///// Spinner /////
+*/
+
+.spinner-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color:#212121;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spinner-grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.spinner-grow {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border-radius: 50%;
+    opacity: 0;
+    animation: spinner-grow 0.75s linear infinite;
+}
+
+.hitam {
+    background-color: #212121;
+}
+
+.grey {
+    background-color: #7D7D7D;
+}
+
+.abu {
+    background-color: #DDD;
 }

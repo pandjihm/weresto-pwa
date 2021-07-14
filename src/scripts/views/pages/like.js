@@ -11,8 +11,20 @@ const Like = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
     const restaurantsContainer = document.querySelector('#restaurants');
-    restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += RestaurantItem(restaurant);
+    if (restaurants.length === 0) {
+      restaurantsContainer.innerHTML = `
+        <div>
+        </div>
+        <div class="fav-resto">
+          ---------------------------------------- <br />
+          You don't have any Favorite Restaurant <br />
+          ----------------------------------------
+        </div>
+      `;
+    }
+    const totalRest = restaurants.length;
+    restaurants.forEach((restaurant, index) => {
+      restaurantsContainer.innerHTML += RestaurantItem(restaurant, index, totalRest);
     });
   },
 };

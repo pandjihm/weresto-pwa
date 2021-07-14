@@ -1,4 +1,12 @@
 import 'regenerator-runtime'; /* for async await transpile */
+
+import './components/app-bar';
+import './components/sec-first';
+import './components/sec-second';
+import './components/sec-third';
+import './components/sec-fourth';
+import './components/footer-bar';
+
 import '../styles/main.css';
 import '../styles/responsive.css';
 
