@@ -307,18 +307,16 @@ Forth Section
 }
 
 .grid-fourth {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-content: top;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
     padding: 3em;
 }
 
-.img-daily {
-    margin-left: 15em;
-}
-
-.img-tech {
-    margin: 2em 0 0 2em;
+.img-partner {
+    margin: 2em;
 }
 
 /*

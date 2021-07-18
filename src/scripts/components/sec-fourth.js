@@ -10,10 +10,10 @@ class SectionFourth extends HTMLElement {
                 Media Partner
             </h2>
             <div class="grid-fourth">
-                <div class="img-daily">
-                    <img tabindex="0" src="../images/heros/dailysocial.png" alt="logo daily social">
+                <div class="img-partner">
+                    <img tabindex="0" src="../images/heros/dailysocial.svg" alt="logo daily social">
                 </div>
-                <div class="img-tech">
+                <div class="img-partner">
                     <img tabindex="0" src="../images/heros/techinasia.svg" alt="logo tech in asia">
                 </div>
             </div>

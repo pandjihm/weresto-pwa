@@ -176,6 +176,50 @@ Tablet Fifth Section
     }
 }
 
+@media screen and (max-width: 680px)
+{
+/*
+Third Section
+*/
+
+    .grid-third {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .icon-third {
+        margin: 0 1.5em 4em 1.5em;
+    }
+
+    .grid-fourth {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+        text-align: center;
+        padding: 3em;
+    }
+    
+    .img-partner {
+        margin: 0 0 3em 0em;
+    }
+}
+
+@media screen and (max-width: 520px)
+{
+/* Reviews */
+
+.restaurant-reviews {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 2em 2em 2em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
 /* 
 Mobile
 */
